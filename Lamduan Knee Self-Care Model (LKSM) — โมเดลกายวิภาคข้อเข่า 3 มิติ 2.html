@@ -1,0 +1,444 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lamduan Knee Self-Care Model (LKSM) — โมเดลกายวิภาคข้อเข่า 3 มิติ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#07121f;--pn:#0e2238;--ln:#1f3a57;--tx:#e6eef8;--mt:#8fa8c4;--ac:#1a73e8;--gd:#ffd166;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans Thai",system-ui,sans-serif;font-size:13px}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid var(--ln)}
+h1{margin:0;font-size:22px}h2{margin:0 0 8px;font-size:15px}
+.sub{color:var(--mt);font-size:12px}
+button{font:inherit;background:var(--pn);color:var(--tx);border:1px solid var(--ln);border-radius:8px;padding:6px 12px;cursor:pointer}
+button.on,button:hover{background:var(--ac);border-color:var(--ac)}
+main{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:12px;padding:12px 16px}
+.p{background:var(--pn);border:1px solid var(--ln);border-radius:12px;padding:12px}
+#cv{position:relative;min-height:520px;height:62vh;padding:0;overflow:hidden;background:#050b14}
+#cv canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}
+.lb{position:absolute;transform:translate(-50%,-50%);font-size:10px;padding:1px 6px;border-radius:6px;background:rgba(7,18,31,.8);border:1px solid var(--gd);color:var(--gd);white-space:nowrap}
+.tag{position:absolute;font-size:11px;color:var(--mt);pointer-events:none}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 16px}.mgrid h2{margin-bottom:8px}
+.mu{display:flex;gap:8px;align-items:center;width:100%;text-align:left;margin-bottom:4px;border-radius:8px}
+.mu i{width:10px;height:10px;border-radius:50%;flex:none}
+.mu small{display:block;color:var(--mt);font-size:11px}
+.mu.sel{border-color:var(--gd);background:#16314d}
+.note{color:var(--mt);font-size:11px;margin:6px 0 0}
+label{display:block;margin:6px 0;cursor:pointer}
+.gd{color:var(--gd);font-weight:600;font-size:12px;margin-top:8px}
+.gd+div{color:var(--mt);font-size:12px}
+.bot{display:grid;grid-template-columns:1fr;gap:12px;padding:0 16px 16px}
+.tg{display:grid;grid-template-columns:1.2fr 1.2fr 1fr;gap:18px}.sw{width:26px;height:26px;border-radius:50%;padding:0;border:2px solid var(--ln)}
+@media(max-width:900px){.tg{grid-template-columns:1fr}}
+.mc{position:absolute;left:12px;bottom:34px;width:280px;max-height:55%;overflow:auto;font-size:11.5px;background:rgba(7,18,31,.92);border:1px solid var(--ln);border-radius:10px;padding:8px 10px}.mc b{color:var(--gd);font-size:13px}.mc span{display:block;color:var(--mt);font-size:10.5px;margin-top:5px}
+button:disabled{opacity:.75;cursor:default}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+input[type=range]{width:100%;accent-color:var(--ac)}
+h2{color:var(--hc,var(--tx));position:relative;padding-left:12px}h2::before{content:"";position:absolute;left:0;top:.15em;height:1.15em;width:4px;border-radius:2px;background:var(--hc,var(--ac))}
+.tb b{margin-right:6px}
+#tps{--tc:#fb923c}[data-t]{border-color:var(--bc)}[data-t].on,[data-t]:hover{background:var(--bc);border-color:var(--bc);color:#07121f}#tps [data-k],#tps [data-s]{border-color:var(--tc)}#tps [data-k].on,#tps [data-k]:hover,#tps [data-s].on,#tps [data-s]:hover{background:var(--tc);border-color:var(--tc);color:#07121f}#tps .tl{color:var(--tc)}
+.tbadge{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:999px;background:var(--tc);color:#07121f;margin-bottom:6px}
+#deg,#adeg{float:right;color:var(--gd);font-size:20px;font-weight:700}
+@media(max-width:900px){main,.bot{grid-template-columns:1fr}#cv{order:-1;min-height:380px}}
+</style></head><body>
+<header><div><h1>Lamduan Knee Self-Care Model (LKSM)</h1><div class="sub">โมเดลกายวิภาคข้อเข่า 3 มิติ (3D Knee Anatomy) • กล้ามเนื้อ กระดูก เอ็น และการงอ–เหยียดเข่า</div><div class="sub" style="color:var(--gd)">พัฒนาโดย กภ.ธณเดช เจตน์ธนัตถ์ นักกายภาพบำบัดชำนาญการ</div><div class="sub">COA No. 94/2569</div><div class="sub">ติดต่อ: LINE <b>tndgolf</b> • โทร <a href="tel:0617935199" style="color:inherit">061-7935199</a></div></div>
+<div class="row" style="margin:0"><button data-v="front" class="on">ด้านหน้า</button><button data-v="back">ด้านหลัง</button><button data-v="side">ด้านข้าง</button><button id="rv">รีเซ็ตมุม</button><button data-f="knee">เข่า</button></div></header>
+<main>
+
+<section class="p" id="cv"><div class="tag" style="left:14px;top:12px">โมเดล 3 มิติ • ลากเพื่อหมุน / เลื่อนเพื่อซูม</div><div class="tag" id="vl" style="right:14px;top:12px">มุมมองด้านหน้า</div><div class="tag" id="lgt" style="left:14px;bottom:10px;right:14px"></div></section>
+<aside class="p"><h2 style="--hc:#a78bfa">1. ชั้นโครงสร้าง</h2>
+<label><input type="checkbox" data-l="muscle" checked> กล้ามเนื้อ</label>
+<label><input type="checkbox" data-l="bone" checked> กระดูก</label>
+<label><input type="checkbox" data-l="lig" checked> เอ็นและเส้นเอ็น</label>
+<label><input type="checkbox" data-l="cart" checked> กระดูกอ่อน/หมอนรองข้อ</label>
+<label><input type="checkbox" id="nat"> สีกล้ามเนื้อธรรมชาติ <span class="sub">(ติ๊ก = สีเนื้อจริง)</span></label>
+<label><input type="checkbox" data-l="skin" checked> ผิวหนัง</label>
+<label><input type="checkbox" id="brf" checked> กางเกง</label>
+<label style="margin-left:22px;color:var(--mt)">ความทึบของผิว <input type="range" id="sk" min="10" max="100" value="40"></label>
+<label><input type="checkbox" id="lbl"> ป้ายชื่อกระดูก</label>
+<label><input type="checkbox" id="lbl2"> ป้ายชื่อเอ็นและเส้นเอ็น</label>
+<label><input type="checkbox" data-l="tape" checked> เทปคิเนซิโอ</label>
+<label><input type="checkbox" id="lm"> จุดสังเกต (Landmarks)</label>
+<hr style="border:0;border-top:1px solid var(--ln);margin:10px 0">
+<h2 style="--hc:#60a5fa">2. ภาพจำลองการเคลื่อนไหว</h2><div class="row" style="margin:0"><button id="play" class="on">▶ การงอ-เหยียดเข่า</button><button id="aplay">▶ กระดก–ถีบข้อเท้า</button><button id="rs">รีเซ็ต 0°</button></div>
+
+<hr style="border:0;border-top:1px solid var(--ln);margin:10px 0">
+<h2 style="--hc:#ffd166">3. องศาการงอเข่า (Knee flexion) <span id="deg">0°</span></h2><input type="range" id="sl" min="0" max="135" value="0">
+<div class="row"><button data-d="0" class="on">0° เหยียด</button><button data-d="30">30°</button><button data-d="60">60°</button><button data-d="90">90°</button><button data-d="120">120°</button><button data-d="135">135° งอมาก</button></div>
+</aside>
+</main>
+<div style="padding:0 16px 12px"><section class="p" id="tps"><h2 style="--hc:#f48fb1">4. เทคนิคการติดคิเนซิโอเทป (Kinesiology Taping)</h2>
+<div class="gd tl" style="margin-top:0">เทคนิค</div><div class="row" style="margin:4px 0 12px"><button class="tb on" data-t="0" style="--bc:#fb923c"><b>เทคนิคที่ 1</b>Quadriceps Facilitation — ส่งเสริมการทำงานของ Quadriceps</button><button class="tb" data-t="1" style="--bc:#2dd4bf"><b>เทคนิคที่ 2</b>Patellar Correction — จัดแนวลูกสะบ้า</button><button class="tb" data-t="2" style="--bc:#c084fc"><b>เทคนิค 1+2</b>ใช้ทั้งสองเทคนิคร่วมกัน</button></div>
+<div class="tg">
+<div id="ti"></div>
+<div><div id="kr"><div class="gd tl" style="margin-top:0">แถบที่แสดง</div><div class="row" style="margin:4px 0 6px"><button data-k="0" class="on">ทั้ง 3 แถบ</button><button data-k="1">1 RF</button><button data-k="2">2 VL</button><button data-k="3">3 VM</button></div><div id="sd" style="min-height:34px"></div></div>
+<div class="gd tl" style="margin-top:8px">วิธีการติด</div><div class="row" style="margin:4px 0 8px"><button data-s="0" class="on">0 ก่อนติด</button><button data-s="1">1 ฐาน</button><button data-s="2">2 แขนเทป</button><button data-s="3">3 ปลาย</button></div><div id="st" style="min-height:40px"></div></div>
+<div><div class="gd" style="margin-top:0">แรงดึงเทป (ขณะดึง) <span id="tnv" style="font-weight:400">65%</span></div><input type="range" id="tn" min="50" max="75" step="5" value="65">
+<div id="par" style="display:none"><div class="gd">แนวลูกสะบ้าของผู้ป่วย <span id="pav" style="font-weight:400"></span></div><input type="range" id="pa" min="-30" max="40" value="20"></div>
+<div class="gd">สีเทป</div><div class="row" style="margin-top:4px"><button class="sw" data-c="f48fb1" style="background:#f48fb1"></button><button class="sw" data-c="4aa3df" style="background:#4aa3df"></button><button class="sw" data-c="e7c7a0" style="background:#e7c7a0"></button><button class="sw" data-c="2a2a2a" style="background:#2a2a2a"></button></div></div>
+</div></section></div>
+
+
+
+
+<div style="padding:0 16px 12px"><section class="p" id="mus"><h2 style="--hc:#fb7185;font-size:17px;margin-bottom:12px">5. ข้อมูลกล้ามเนื้อ</h2><div class="mgrid"><div><h2 style="--hc:#e879f9">กล้ามเนื้อสะโพก — Gluteal</h2><div id="lg"></div></div><div><h2 style="--hc:#fb923c">กล้ามเนื้อต้นขาด้านหน้า — Quadriceps (4 มัด)</h2><div id="lq"></div></div><div><h2 style="--hc:#f43f5e">กล้ามเนื้อต้นขาด้านหลัง — Hamstrings (3 กล้ามเนื้อหลัก)</h2><div id="lh"></div></div><div><h2 style="--hc:#2dd4bf">กล้ามเนื้อน่อง — Calf (Triceps surae)</h2><div id="lc"></div></div><div><h2 style="--hc:#38bdf8">กล้ามเนื้อขาด้านหน้า–ด้านข้าง (ข้อเท้า)</h2><div id="lt"></div></div></div></section></div>
+<div style="padding:0 16px 12px"><section class="p" id="sfp"><h2 style="--hc:#f87171">6. ความปลอดภัยและการดูแล <span class="sub">• ก่อนติด ระหว่างติด หลังติด</span></h2>
+<div class="row" style="margin:0 0 8px"><button data-sf="0" class="on">ก่อนติด</button><button data-sf="1">ระหว่างติด</button><button data-sf="2">หลังติด</button><button data-sf="3">ระยะเวลาติด</button></div>
+<div id="sfc"></div>
+</section></div>
+<script>
+(function(){
+var T=[
+['<b>ประเมินผู้ป่วย:</b> ซักประวัติ ตรวจผิวหนัง ประเมินอาการ และตรวจสอบข้อห้ามก่อนเลือกวิธีติดเทป',
+'<b>ข้อห้าม/ควรหลีกเลี่ยง:</b> ผิวหนังมีแผลเปิด การติดเชื้อ หรือผื่นอักเสบบริเวณที่จะติด และผู้ที่เคยแพ้กาวของเทปชนิดนี้',
+'<b>ข้อควรระวัง:</b> ผู้ป่วยมะเร็งบริเวณที่จะติด ผู้มีประวัติ DVT หรือสงสัยภาวะลิ่มเลือด ผู้มีโรคหัวใจหรือไตที่มีอาการบวม ผู้ที่มีผิวหนังเปราะบาง หรือการรับความรู้สึกผิดปกติ ควรประเมินเป็นรายบุคคลและปรึกษาแพทย์เมื่อจำเป็น'],
+['<b>เตรียมผิว:</b> ผิวสะอาดและแห้ง ไม่มีน้ำมันหรือโลชั่น ตัดขนหากจำเป็นโดยไม่ทำให้ผิวระคายเคือง',
+'<b>ติดอย่างถูกวิธี:</b> ใช้แรงดึงตามเทคนิคที่เหมาะสม ไม่ดึงเทปตึงเกินไป และไม่ทำให้ผิวหนังเกิดรอยพับ',
+'<b>ทดสอบความทนต่อเทป:</b> พิจารณาทดลองติดพื้นที่เล็กในผู้ที่มีความเสี่ยง พร้อมติดตามอาการ ทั้งนี้ไม่สามารถรับประกันว่าจะไม่แพ้'],
+['<b>เฝ้าระวังผิวหนัง:</b> สังเกตอาการคัน แสบ แดง บวม พุพอง หรือผื่น',
+'<b>หยุดใช้เมื่อผิดปกติ:</b> หากมีอาการระคายเคืองหรือแพ้ ให้ลอกเทปออกอย่างนุ่มนวลและประเมินอาการ หากรุนแรงควรพบแพทย์',
+'<b>วิธีลอกเทป:</b> ค่อย ๆ ลอกตามแนวขน ใช้มือประคองผิว และอาจใช้น้ำมันที่เหมาะสมช่วยลดแรงดึง หลีกเลี่ยงการกระชาก'],
+['ระยะเวลาขึ้นกับชนิดเทป เทคนิค สภาพผิว และคำแนะนำของผู้รักษา',
+'ตรวจสอบผิวหนังเป็นระยะ และไม่ควรติดซ้ำบนผิวที่ยังระคายเคือง',
+'หากมีอาการปวด บวม ชา สีผิวเปลี่ยน หรือปลายมือปลายเท้าเย็นผิดปกติ ให้ประเมินทันทีและนำเทปออกหากเกี่ยวข้องกับอาการ']];
+function show(k){document.getElementById('sfc').innerHTML='<ul style="margin:0;padding-left:18px;line-height:1.6">'+T[k].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>';
+var b=document.querySelectorAll('[data-sf]');for(var i=0;i<b.length;i++)b[i].classList.toggle('on',+b[i].dataset.sf===k)}
+var b=document.querySelectorAll('[data-sf]');for(var i=0;i<b.length;i++)b[i].onclick=function(){show(+this.dataset.sf)};
+show(0)})();
+</script>
+<div class="sub" style="text-align:center;padding:0 16px 18px">Lamduan Knee Self-Care Model (LKSM) • พัฒนาโดย กภ.ธณเดช เจตน์ธนัตถ์ นักกายภาพบำบัดชำนาญการ • COA No. 94/2569 • ใช้เพื่อการเรียนการสอนเท่านั้น<br>ช่องทางติดต่อ: LINE <b>tndgolf</b> • โทรศัพท์ <a href="tel:0617935199" style="color:inherit">061-7935199</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=id=>document.getElementById(id),V=(x,y,z)=>new THREE.Vector3(x,y,z);
+const box=$('cv'),R=new THREE.WebGLRenderer({antialias:true,alpha:true});box.appendChild(R.domElement);R.setPixelRatio(Math.min(devicePixelRatio,2));
+const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(35,1,.1,120);
+S.add(new THREE.HemisphereLight(0xffffff,0x223344,.9));
+const d1=new THREE.DirectionalLight(0xffffff,.8);d1.position.set(3,5,6);S.add(d1);
+const d2=new THREE.DirectionalLight(0xffffff,.45);d2.position.set(-4,2,-5);S.add(d2);
+const d3=new THREE.DirectionalLight(0xffffff,.3);d3.position.set(0,-6,4);S.add(d3);
+const ROOT=new THREE.Group();S.add(ROOT);const LBM=new THREE.Matrix4(),toW=v=>v.applyMatrix4(LBM);
+const G={};['muscle','bone','lig','cart','skin'].forEach(k=>{G[k]=new THREE.Group();ROOT.add(G[k])});
+const mat=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.6},o||{}));
+const BONE=mat(0xf1e7d3,{roughness:.5}),CART=mat(0xbfe8f2,{transparent:true,opacity:.55,roughness:.3}),MEN=mat(0xa9c7d6,{roughness:.4}),LIG=mat(0xf2e3a0,{roughness:.4}),DK=mat(0xcbbd9f);
+function add(g,geo,m,p,s,r){const o=new THREE.Mesh(geo,m);o.position.set(...p);if(s)o.scale.set(...s);if(r)o.rotation.set(...r);g.add(o);return o}
+const sph=new THREE.SphereGeometry(1,28,20),cyl=(a,b,h)=>new THREE.CylinderGeometry(a,b,h,28);
+// ===== Rig: 1 unit ≈ 8 cm • origin = knee joint centre • +x = lateral (right leg) • +z = anterior =====
+const UP=V(0,1,0),M=new THREE.Matrix4(),MA=new THREE.Matrix4(),A=V(0,-5.42,.02),T1=new THREE.Matrix4(),T2=new THREE.Matrix4(),RA=new THREE.Matrix4();
+const tp=(x,y,z)=>V(x,y,z).applyMatrix4(M),tf=(x,y,z)=>V(A.x+x,A.y+y,A.z+z).applyMatrix4(MA),F=(x,y,z)=>[A.x+x,A.y+y,A.z+z],FV=(x,y,z)=>V(A.x+x,A.y+y,A.z+z);
+let TH=0,deg=0,ank=0,play=false,dir=1,aplay=false,adir=-1;
+function place(m,a,b,r){const d=b.clone().sub(a),l=d.length();m.position.copy(a).addScaledVector(d,.5);m.quaternion.setFromUnitVectors(UP,d.normalize());m.scale.set(r,l,r)}
+const lc=new THREE.CylinderGeometry(1,1,1,12),c16=new THREE.CylinderGeometry(1,1,1,16),sg=(g,m,a,b,r)=>{const o=new THREE.Mesh(c16,m);place(o,V(...a),V(...b),r);g.add(o);return o};
+const rig=g=>{g.matrixAutoUpdate=false;return g};
+const FT=(()=>{const c=document.createElement('canvas');c.width=64;c.height=128;const x=c.getContext('2d');x.fillStyle='#ddd';x.fillRect(0,0,64,128);for(let i=0;i<64;i++){const v=150+Math.random()*105|0;x.fillStyle='rgba('+v+','+v+','+v+',.9)';x.fillRect(i,0,1+(Math.random()*1.5|0),128)}for(let i=0;i<14;i++){x.fillStyle='rgba(60,60,60,.35)';x.fillRect(Math.random()*64,Math.random()*60,1,40+Math.random()*60)}const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(2,1);return t})();
+function Tube(grp,mt,N,K){const g=new THREE.BufferGeometry(),n=N*(K+1),uv=new Float32Array(n*2),ix=[];for(let i=0;i<N;i++)for(let j=0;j<=K;j++){uv[(i*(K+1)+j)*2]=j/K;uv[(i*(K+1)+j)*2+1]=i/(N-1)}for(let i=0;i<N-1;i++)for(let j=0;j<K;j++){const a=i*(K+1)+j,b=a+K+1;ix.push(a,b,a+1,b,b+1,a+1)}g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(n*3),3));g.setAttribute('uv',new THREE.BufferAttribute(uv,2));g.setIndex(ix);const m=new THREE.Mesh(g,mt);m.frustumCulled=false;grp.add(m);return{g,N,K,m}}
+const bz=(A,C,B,t)=>{const u=1-t;return A.clone().multiplyScalar(u*u).addScaledVector(C,2*u*t).addScaledVector(B,t*t)},bzF=(A,B,Cc)=>t=>bz(A,Cc,B,t);
+function shape(T,P,rad,flat,wob){if(wob===undefined)wob=.06;const g=T.g.attributes.position,N=T.N,K=T.K;for(let i=0;i<N;i++){const t=i/(N-1),Pt=P(t),Tn=P(Math.min(1,t+.02)).sub(P(Math.max(0,t-.02))).normalize(),h=Math.abs(Tn.z)>.85?V(1,0,0):V(0,0,1),Sd=new THREE.Vector3().crossVectors(Tn,h).normalize(),Nm=new THREE.Vector3().crossVectors(Sd,Tn),r=rad(t);for(let j=0;j<=K;j++){const an=j/K*6.2832,w=1+wob*Math.sin(an*4+t*5),cx=Math.cos(an)*r*w,cy=Math.sin(an)*r*w*flat;g.setXYZ(i*(K+1)+j,Pt.x+Sd.x*cx+Nm.x*cy,Pt.y+Sd.y*cx+Nm.y*cy,Pt.z+Sd.z*cx+Nm.z*cy)}}g.needsUpdate=true;T.g.computeVertexNormals()}
+const lf=(g,P,rad,fl,m,wob,N,K)=>{const T=Tube(g,m||BONE,N||26,K||22);shape(T,P,rad,fl,wob===undefined?.03:wob);return T};
+const bel=(R,pk)=>t=>{const s=t<pk?Math.sin(Math.PI/2*t/pk):Math.cos(Math.PI/2*(t-pk)/(1-pk));return R*(Math.pow(Math.max(s,0),.55)+.04)},tr=t=>.022+.04*Math.pow(1-t,2);
+function lerpTab(T,x){if(x<=T[0][0])return T[0];const L=T[T.length-1];if(x>=L[0])return L;for(let i=1;i<T.length;i++)if(x<=T[i][0]){const a=T[i-1],b=T[i],u=(x-a[0])/(b[0]-a[0]),s=u*u*(3-2*u);return a.map((v,k)=>v+(b[k]-v)*s)}return L}
+
+// ===== FEMUR (fixed) =====
+const fB=new THREE.Group(),fC=new THREE.Group();G.bone.add(fB);G.cart.add(fC);
+add(fB,sph,BONE,[.25,0,-.03],[.25,.37,.42]);add(fB,sph,BONE,[-.25,-.02,-.05],[.25,.39,.43]);
+add(fC,sph,CART,[.25,0,-.03],[.265,.385,.435]);add(fC,sph,CART,[-.25,-.02,-.05],[.265,.405,.445]);
+add(fB,sph,BONE,[.16,.12,.15],[.2,.28,.22]);add(fB,sph,BONE,[-.15,.1,.13],[.18,.26,.2]);add(fC,sph,CART,[0,.1,.18],[.3,.28,.21]);
+add(fB,sph,BONE,[.47,.13,-.02],[.08,.1,.1]);add(fB,sph,BONE,[-.49,.15,-.03],[.09,.11,.1]);add(fB,sph,BONE,[-.4,.44,-.08],[.05,.06,.05]);
+add(fB,sph,DK,[0,-.06,-.26],[.09,.2,.18]);
+lf(fB,bzF(V(.5,4.45,-.02),V(.02,.3,-.04),V(.3,2.4,.16)),t=>.155+.02*Math.pow(1-t,6)+.3*Math.pow(t,5),.85);
+sg(fB,BONE,[.52,4.5,0],[-.04,4.88,.06],.13);
+add(fB,sph,BONE,[-.1,4.92,.06],[.29,.29,.29]);add(fC,sph,CART,[-.1,4.92,.06],[.3,.3,.3]);
+add(fB,sph,BONE,[.66,4.7,-.06],[.17,.3,.22]);add(fB,sph,BONE,[.28,4.12,-.14],[.07,.11,.08]);
+sg(fB,BONE,[.62,4.55,-.15],[.3,4.15,-.15],.05);sg(fB,BONE,[.44,3.7,-.12],[.1,1.0,-.17],.035);
+// ===== TIBIA + FIBULA (rotate with knee) =====
+const tB=new THREE.Group(),tC=new THREE.Group();G.bone.add(tB);G.cart.add(tC);
+add(tB,cyl(1,.92,.16),BONE,[0,-.5,-.02],[.5,1,.38]);
+add(tB,sph,BONE,[.3,-.62,-.08],[.21,.16,.24]);add(tB,sph,BONE,[-.29,-.62,-.05],[.23,.16,.26]);
+add(tB,sph,BONE,[-.04,-.41,0],[.035,.06,.035]);add(tB,sph,BONE,[.05,-.41,-.01],[.035,.06,.035]);
+lf(tB,bzF(V(0,-.6,0),V(-.02,-5.12,.02),V(.04,-2.8,.1)),t=>.14+.22*Math.pow(1-t,6)+.1*Math.pow(t,7),.82);
+add(tB,sph,BONE,[.02,-.82,.24],[.1,.15,.08]);add(tB,sph,BONE,[.37,-.72,.12],[.06,.06,.05]);
+sg(tB,BONE,[.03,-1.15,.2],[0,-4.2,.15],.03);
+add(tB,sph,BONE,[0,-5.12,.01],[.24,.14,.2]);add(tB,sph,BONE,[-.25,-5.32,.03],[.085,.2,.12]);
+add(tB,sph,BONE,[.44,-.82,-.2],[.11,.12,.1]);
+lf(tB,bzF(V(.44,-.9,-.2),V(.34,-5.25,-.1),V(.48,-3,-.22)),t=>.05+.025*Math.pow(1-t,4)+.04*Math.pow(t,6),1);
+add(tB,sph,BONE,[.33,-5.43,-.08],[.085,.23,.11]);
+add(tB,new THREE.BoxGeometry(.22,3.6,.01),mat(0xf5e6a8,{transparent:true,opacity:.35,side:2}),[.22,-3,-.08]);
+add(tC,cyl(.98,.98,.03),CART,[0,-.43,-.02],[.48,1,.36]);
+add(tC,new THREE.TorusGeometry(.2,.055,10,28),MEN,[-.24,-.41,-.03],[1,1.2,.5],[Math.PI/2,0,0]);
+add(tC,new THREE.TorusGeometry(.17,.055,10,28),MEN,[.24,-.41,-.02],[1,1,.5],[Math.PI/2,0,0]);
+add(tC,sph,CART,[0,-5.24,.02],[.2,.03,.18]);
+// ===== PATELLA: rounded triangle, apex down =====
+const pat=add(G.bone,sph,BONE,[0,.03,.51]);
+const pg=new THREE.SphereGeometry(1,28,20),pa=pg.attributes.position;for(let i=0;i<pa.count;i++){const y=pa.getY(i),f=.55+.45*(y+1)/2;pa.setX(i,pa.getX(i)*f);if(pa.getZ(i)<0)pa.setZ(i,pa.getZ(i)*.45)}pg.computeVertexNormals();pat.geometry=pg;pat.scale.set(.25,.28,.13);pat.material=mat(0x2563eb,{roughness:.35});
+const pc=new THREE.Mesh(pg,CART);pc.position.z=-.25;pc.scale.set(.9,.92,.5);pat.add(pc);
+// ===== FOOT (moves with ankle) =====
+const kB=rig(new THREE.Group()),kC=rig(new THREE.Group()),kL=rig(new THREE.Group()),kS=rig(new THREE.Group());G.bone.add(kB);G.cart.add(kC);G.lig.add(kL);G.skin.add(kS);
+add(kB,sph,BONE,F(0,-.03,0),[.21,.16,.28]);add(kC,sph,CART,F(0,-.01,0),[.19,.16,.24]);
+add(kB,sph,BONE,F(-.05,-.14,.28),[.12,.11,.15]);add(kB,sph,BONE,F(-.1,-.2,.43),[.13,.13,.12]);
+add(kB,sph,BONE,F(.05,-.58,-.25),[.19,.26,.45]);add(kB,sph,BONE,F(.03,-.6,-.66),[.17,.25,.15]);
+add(kB,sph,BONE,F(.13,-.66,.18),[.15,.17,.22]);add(kB,sph,BONE,F(-.17,-.4,-.08),[.09,.05,.13]);
+add(kB,sph,BONE,F(-.15,-.3,.58),[.18,.14,.1]);add(kB,sph,BONE,F(-.27,-.42,.6),[.06,.06,.06]);
+add(kB,sph,BONE,F(.19,-.6,.55),[.15,.15,.21]);
+add(kB,sph,BONE,F(-.24,-.46,.78),[.1,.16,.15]);add(kB,sph,BONE,F(-.07,-.38,.76),[.08,.12,.12]);add(kB,sph,BONE,F(.07,-.43,.76),[.08,.13,.13]);
+const MT=[[-.24,-.58,.95,-.3,-.93,2.05,.095],[-.08,-.47,.93,-.12,-.9,2.1,.065],[.06,-.5,.9,.05,-.91,2.0,.06],[.18,-.6,.8,.21,-.93,1.9,.058],[.3,-.7,.72,.37,-.96,1.76,.062]];
+const PH=[[-.32,-.98,2.62],[-.13,-.96,2.5],[.05,-.97,2.4],[.22,-.98,2.28],[.38,-1.0,2.12]];
+MT.forEach((m,i)=>{const a=FV(m[0],m[1],m[2]),b=FV(m[3],m[4],m[5]),r=m[6];lf(kB,bzF(a,b,a.clone().lerp(b,.5).add(V(0,.06,0))),t=>r*(1+.6*Math.pow(1-t,4)+.35*Math.pow(t,6)),.95,BONE,0,14,14);add(kB,sph,BONE,F(m[3],m[4],m[5]),[r*1.4,r*1.4,r*1.3]);
+const p=PH[i],c=FV(p[0],p[1],p[2]);lf(kB,bzF(b,c,b.clone().lerp(c,.5).add(V(0,.05,0))),t=>r*(.85-.3*t),.9,BONE,0,12,12);add(kB,sph,BONE,F(p[0],p[1],p[2]),[r*.8,r*.7,r*.8])});
+add(kB,sph,BONE,F(.37,-.72,.7),[.07,.06,.08]);
+lf(kL,bzF(FV(.04,-.84,-.5),FV(-.08,-.98,1.85),FV(0,-.96,.7)),t=>.022,3.2-1.2*0,LIG,0,16,12);
+sg(kL,LIG,F(-.17,-.43,0),F(-.17,-.4,.55),.04);
+// ===== LIGAMENTS (re-placed each frame) =====
+const LGS=[['ACL',()=>V(.12,0,-.15),()=>tp(.04,-.43,.14),.045],['PCL',()=>V(-.1,-.02,.05),()=>tp(0,-.5,-.3),.05],['MCL',()=>V(-.52,.16,-.02),()=>tp(-.42,-1.3,0),.05],['LCL',()=>V(.5,.14,-.04),()=>tp(.47,-.78,-.2),.04],
+['ATFL',()=>tp(.37,-5.42,.04),()=>tf(.17,-.15,.3),.035],['CFL',()=>tp(.34,-5.6,-.1),()=>tf(.2,-.5,-.3),.035],['PTFL',()=>tp(.33,-5.45,-.17),()=>tf(.08,-.12,-.24),.035],
+['Deltoid',()=>tp(-.26,-5.4,.07),()=>tf(-.2,-.3,.58),.035],['',()=>tp(-.27,-5.48,0),()=>tf(-.19,-.38,-.06),.035],['',()=>tp(-.25,-5.44,-.07),()=>tf(-.15,-.12,-.18),.035],['AITFL',()=>tp(.18,-5.2,.15),()=>tp(.32,-5.28,.02),.03]];
+const LGM=LGS.map(l=>({m:add(G.lig,lc,LIG,[0,0,0]),n:l[0],a:l[1],b:l[2],r:l[3]}));
+const ptd=add(G.lig,lc,LIG,[0,0,0]);
+// ===== MUSCLES =====
+const PT={top:V(0,0,0),bot:V(0,0,0)};
+const MU=[
+{h:'lg',n:'Gluteus maximus',d:'เหยียดสะโพก • หมุนต้นขาออก',c:0xd946ef,nat:0x9b3c35,o:()=>V(-.55,5.75,-.98),i:()=>V(.5,3.95,-.18),r:.46,pk:.42,bg:V(.15,0,-.32),k:.86,fl:.55},
+{h:'lg',n:'Gluteus medius',d:'กางสะโพก • ช่วยทรงตัวขณะยืนขาเดียว',c:0x818cf8,nat:0xa4473e,o:()=>V(.45,6.25,-.3),i:()=>V(.72,4.82,-.02),r:.36,pk:.4,bg:V(.28,0,-.05),k:.86,fl:.5},
+{h:'lq',n:'Rectus femoris',d:'เหยียดเข่าและช่วยงอสะโพก',c:0xef4444,nat:0xa84038,o:()=>V(.3,5.42,.42),i:()=>PT.top.clone().add(V(0,.02,.05)),r:.24,pk:.45,bg:V(0,0,.14),k:.87,fl:.8},
+{h:'lq',n:'Vastus lateralis',d:'เหยียดเข่า',c:0xfb923c,nat:0x9c372f,o:()=>V(.72,4.42,.02),i:()=>PT.top.clone().add(V(.2,-.04,-.03)),r:.33,pk:.42,bg:V(.34,0,.04),k:.88,fl:.7},
+{h:'lq',n:'Vastus medialis',d:'ช่วยควบคุมแนวสะบ้า',c:0xfbbf24,nat:0xb04a40,o:()=>V(0,3.5,-.08),i:()=>PT.top.clone().add(V(-.2,-.1,-.03)),r:.28,pk:.72,bg:V(-.3,0,.12),k:.94,fl:.75},
+{h:'lq',n:'Vastus intermedius',d:'อยู่ลึกใต้ Rectus femoris',c:0xa78bfa,nat:0x8c3029,o:()=>V(.42,4.0,.14),i:()=>PT.top.clone().add(V(0,.02,-.07)),r:.21,pk:.45,bg:V(-.05,0,.08),k:.88,fl:.7},
+{h:'lh',n:'Biceps femoris',d:'งอเข่า • หมุนออก',c:0xf43f5e,nat:0x9a3a34,o:()=>V(-.22,4.45,-.5),i:()=>tp(.47,-.8,-.24),w:[()=>V(.46,.3,-.36)],r:.26,pk:.45,bg:V(.22,0,-.16),k:.78,fl:.72},
+{h:'lh',n:'Semitendinosus',d:'งอเข่า • หมุนเข้า',c:0x22c55e,nat:0x8f332d,o:()=>V(-.3,4.42,-.52),i:()=>tp(-.26,-1.08,.2),w:[()=>V(-.45,.25,-.36),()=>tp(-.45,-.75,-.12)],r:.19,pk:.35,bg:V(-.08,0,-.2),k:.72,fl:.75},
+{h:'lh',n:'Semimembranosus',d:'งอเข่า • หมุนเข้า',c:0x38bdf8,nat:0xa5453d,o:()=>V(-.18,4.48,-.44),i:()=>tp(-.36,-.62,-.2),w:[()=>V(-.36,.3,-.4)],r:.24,pk:.55,bg:V(-.14,0,-.16),k:.82,fl:.72},
+{h:'lc',n:'Gastrocnemius (medial head)',d:'น่องส่วนใน • งอเข่าและถีบปลายเท้าลง',c:0x14b8a6,nat:0x9a3b34,o:()=>V(-.27,.28,-.3),i:()=>tf(-.01,-.5,-.79),r:.27,pk:.38,bg:V(-.12,0,-.3),k:.5,tw:1.25,fl:.72,rb:.6},
+{h:'lc',n:'Gastrocnemius (lateral head)',d:'น่องส่วนนอก • งอเข่าและถีบปลายเท้าลง',c:0x84cc16,nat:0x8f352f,o:()=>V(.27,.28,-.3),i:()=>tf(.04,-.5,-.79),r:.23,pk:.38,bg:V(.12,0,-.26),k:.46,tw:1.25,fl:.72,rb:.6},
+{h:'lc',n:'Soleus',d:'อยู่ลึกใต้ Gastrocnemius • ถีบปลายเท้าลง',c:0xe879f9,nat:0x7d2b27,o:()=>tp(.16,-1.05,-.26),i:()=>tf(.02,-.48,-.8),r:.27,pk:.55,bg:V(0,0,-.12),k:.72,tw:1.3,fl:.6,rb:1},
+{h:'lt',n:'Tibialis anterior',d:'กระดกข้อเท้าขึ้น • บิดฝ่าเท้าเข้า',c:0x0ea5e9,nat:0xa23e36,o:()=>tp(.24,-1.02,.18),i:()=>tf(-.28,-.6,.88),w:[()=>tp(.04,-5.12,.3),()=>tf(-.18,-.08,.56)],r:.17,pk:.35,bg:V(.06,0,.05),k:.6,fl:.8,rb:1},
+{h:'lt',n:'Fibularis longus',d:'บิดฝ่าเท้าออก • ช่วยถีบปลายเท้าลง',c:0xf97316,nat:0x95382f,o:()=>tp(.52,-.98,-.14),i:()=>tf(-.2,-.82,.92),w:[()=>tp(.42,-5.3,-.24),()=>tf(.31,-.6,.1),()=>tf(.27,-.84,.55)],r:.14,pk:.4,bg:V(.08,0,0),k:.55,fl:.8,rb:1}];
+const MS=[];let sel=null;
+function mk(){MU.forEach(s=>{const m=mat(s.c,{transparent:true,map:FT,bumpMap:FT,bumpScale:2,roughness:.5,side:2}),tm=mat(0xeee4c8,{roughness:.4,side:2}),b=Tube(G.muscle,m,28,20),t=Tube(G.lig,tm,s.w?30:8,10);
+const o={n:s.n,s,b,t,m,tm};MS.push(o);
+const el=document.createElement('button');el.className='mu';el.innerHTML=`<i style="background:#${s.c.toString(16).padStart(6,'0')}"></i><span>${s.n}<small>${s.d}</small></span>`;
+el.onclick=()=>{sel=sel===o?null:o;document.querySelectorAll('.mu').forEach(x=>x.classList.remove('sel'));if(sel)el.classList.add('sel');fade();minfo();if(sel){const r=box.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)box.scrollIntoView({behavior:'smooth',block:'center'})}};$(s.h).appendChild(el)})}
+mk();
+const NAT=$('nat');function setCol(){MS.forEach(o=>{o.m.color.setHex(NAT.checked?o.s.nat:o.s.c);o.tm.color.setHex(0xeee4c8)})}NAT.onchange=setCol;setCol();
+function fade(){MS.forEach(o=>{o.m.opacity=!sel||sel===o?1:.18;o.m.emissive.setHex(sel===o?0x333333:0)})}fade();
+// ===== SKIN =====
+const SKM=mat(0xe3b196,{transparent:true,opacity:.4,roughness:.85,side:2,depthWrite:false}),SK=Tube(G.skin,SKM,64,36),FS=Tube(kS,SKM,44,32);SK.m.renderOrder=FS.m.renderOrder=10;
+const LP=[[-5.7,.42,.32,.72],[-4.8,.37,.26,.66],[-3.8,.45,.25,.6],[-2.6,.58,.27,.82],[-1.5,.66,.3,.95],[-.6,.66,.5,.66],[0,.73,.67,.62],[.6,.74,.68,.64],[1.6,.84,.76,.74],[3.2,.97,.88,.9],[4.8,1.0,.9,1.0],[6.3,.92,.8,.95]];
+let SKC=null,SKL=1,KT=.5;const SX=V(1,0,0);
+function ring(t){const P=SKC.getPointAt(t),Tn=SKC.getTangentAt(t),Nm=new THREE.Vector3().crossVectors(SX,Tn).normalize(),d=(KT-t)*SKL,p=lerpTab(LP,d),kn=1+.12*(TH/2.356)*Math.exp(-Math.pow(d/.7,2));return{P,Nm,p:[p[1]*kn,p[2]*kn,p[3]*kn]}}
+function rpt(r,an,ex){const s=Math.sin(an),cx=Math.cos(an)*(r.p[0]+ex),cy=s*((s>0?r.p[2]:r.p[1])+ex);return V(r.P.x+SX.x*cx+r.Nm.x*cy,r.P.y+SX.y*cx+r.Nm.y*cy,r.P.z+SX.z*cx+r.Nm.z*cy)}
+function tY(y){let lo=0,hi=KT;const ky=SKC.getPointAt(KT).y;if(y<ky)return Math.min(1,KT+Math.min(.04,(ky-y)/SKL));for(let i=0;i<22;i++){const m=(lo+hi)/2;if(SKC.getPointAt(m).y>y)lo=m;else hi=m}return(lo+hi)/2}
+function skinUp(){SKC=new THREE.CatmullRomCurve3([V(.12,5.95,0),V(.17,3.6,0),V(.06,1.6,0),V(0,0,0),tp(0,-1.6,0),tp(0,-3.4,0),tp(0,-5.32,0)],false,'centripetal');SKL=SKC.getLength();
+let bd=1e9;for(let i=0;i<=300;i++){const t=i/300,d=SKC.getPointAt(t).lengthSq();if(d<bd){bd=d;KT=t}}
+const g=SK.g.attributes.position,K=SK.K;for(let i=0;i<SK.N;i++){const r=ring(i/(SK.N-1));for(let j=0;j<=K;j++){const q=rpt(r,j/K*6.2832,0);g.setXYZ(i*(K+1)+j,q.x,q.y,q.z)}}g.needsUpdate=true;SK.g.computeVertexNormals()}
+(function(){const cr=new THREE.CatmullRomCurve3([FV(.03,-.6,-.92),FV(.02,-.5,-.62),FV(0,-.4,-.1),FV(-.02,-.5,.5),FV(0,-.7,1.3),FV(0,-.86,2.0),FV(0,-.93,2.72)],false,'centripetal'),
+FP=[[0,.05,.05,.05],[.05,.24,.28,.36],[.18,.33,.6,.6],[.36,.42,.42,.58],[.56,.5,.26,.38],[.78,.52,.14,.2],[.93,.45,.09,.1],[1,.16,.04,.04]],g=FS.g.attributes.position,K=FS.K;
+for(let i=0;i<FS.N;i++){const t=i/(FS.N-1),P=cr.getPointAt(t),Tn=cr.getTangentAt(t),Nm=new THREE.Vector3().crossVectors(SX,Tn).normalize(),p=lerpTab(FP,t);for(let j=0;j<=K;j++){const an=j/K*6.2832,s=Math.sin(an),cx=Math.cos(an)*p[1],cy=s*(s>0?p[3]:p[2]);g.setXYZ(i*(K+1)+j,P.x+SX.x*cx+Nm.x*cy,P.y+SX.y*cx+Nm.y*cy,P.z+SX.z*cx+Nm.z*cy)}}g.needsUpdate=true;FS.g.computeVertexNormals()})();
+$('sk').oninput=e=>{SKM.opacity=e.target.value/100};
+// ===== LABELS =====
+function mkL(list,col){const D=document.createElement('div');D.style.cssText='position:absolute;inset:0;pointer-events:none;display:none';box.appendChild(D);const E=list.map(l=>{const e=document.createElement('div');e.className='lb';if(col){e.style.borderColor=col;e.style.color=col}e.textContent=l[0];D.appendChild(e);return e});return{D,E,list}}
+function drawL(L,dy){if(L.D.style.display==='none')return;const w=box.clientWidth,h=box.clientHeight;L.list.forEach((l,i)=>{const p=(L.cen?l[1]().add(PEL.position):toW(l[1]())).project(C),e=L.E[i];if(p.z>1){e.style.display='none';return}e.style.display='';e.style.left=(p.x*.5+.5)*w+'px';e.style.top=(-p.y*.5+.5)*h+(dy||0)+'px'})}
+const LBB=mkL([['Femoral head',()=>V(-.1,4.92,.4)],['Greater trochanter',()=>V(.86,4.75,0)],['Femur shaft',()=>V(.5,2.8,.2)],['Medial condyle',()=>V(-.52,-.08,.2)],['Lateral condyle',()=>V(.52,-.08,.2)],['Patella',()=>pat.position.clone().add(V(0,0,.15))],['Tibial plateau',()=>tp(-.5,-.5,.2)],['Tibial tuberosity',()=>tp(.02,-.84,.36)],['Tibia shaft',()=>tp(-.2,-3,.2)],['Medial malleolus',()=>tp(-.36,-5.33,.05)],['Fibula head',()=>tp(.58,-.82,-.2)],['Fibula shaft',()=>tp(.56,-2.8,-.2)],['Lateral malleolus',()=>tp(.45,-5.45,-.08)],
+['Talus',()=>tf(-.02,-.05,.3)],['Calcaneus',()=>tf(.1,-.62,-.62)],['Navicular',()=>tf(-.3,-.3,.62)],['Cuboid',()=>tf(.34,-.62,.55)],['Cuneiforms',()=>tf(-.08,-.34,.85)],['Metatarsals',()=>tf(.02,-.72,1.5)],['Phalanges',()=>tf(0,-.92,2.4)]]);
+// ===== PELVIS + LOWER TRUNK (central, drawn once) =====
+const PEL=new THREE.Group();S.add(PEL);const PB=new THREE.Group(),PSK=new THREE.Group(),BRF=new THREE.Group();PEL.add(PB,PSK,BRF);
+const PG=(m,p,s,r)=>add(PB,sph,m||BONE,p,s,r),IG=new THREE.SphereGeometry(1,32,20);{const a=IG.attributes.position;for(let i=0;i<a.count;i++){const x=a.getX(i),y=a.getY(i);if(y<0)a.setX(i,x*(1+y*.62));a.setY(i,y<0?y*1.1:y);a.setZ(i,a.getZ(i)+.9*(1-x*x))}IG.computeVertexNormals()}const SG=new THREE.SphereGeometry(1,28,18);{const a=SG.attributes.position;for(let i=0;i<a.count;i++){const y=a.getY(i);if(y<0)a.setX(i,a.getX(i)*(1+y*.75))}SG.computeVertexNormals()}
+add(PB,SG,BONE,[0,5.7,-.84],[.55,.62,.16],[-.45,0,0]);PG(BONE,[0,5.05,-.8],[.12,.22,.08],[-.7,0,0]);PG(BONE,[0,4.82,-.68],[.06,.1,.05]);
+PG(BONE,[0,6.48,-.62],[.29,.14,.22]);PG(BONE,[0,6.84,-.58],[.28,.14,.21]);PG(BONE,[0,7.2,-.55],[.27,.14,.2]);[6.48,6.84,7.2].forEach(y=>sg(PB,BONE,[0,y,-.78],[0,y-.08,-1.0],.05));
+[-1,1].forEach(s=>{const X=x=>s*x;
+add(PB,IG,BONE,[X(.98),5.92,-.06],[.8,.48,.06],[0,-s*.99,0]);sg(PB,BONE,[X(.92),5.62,-.08],[X(.7),5.1,0],.17);sg(PB,BONE,[X(.55),5.82,-.72],[X(.95),5.4,-.3],.12);
+
+PG(BONE,[X(1.4),5.8,.6],[.09,.08,.09]);PG(BONE,[X(1.08),5.42,.36],[.08,.07,.07]);
+PG(BONE,[X(.6),4.97,0],[.24,.34,.32]);add(PB,new THREE.TorusGeometry(.31,.05,10,28),BONE,[X(.74),4.95,.08],[1,1,1],[0,s*(Math.PI/2-.35),0]);
+sg(PB,BONE,[X(.72),4.9,.3],[X(.1),4.74,.62],.075);PG(BONE,[X(.06),4.6,.6],[.07,.19,.1]);
+sg(PB,BONE,[X(.1),4.45,.52],[X(.6),4.3,-.28],.065);sg(PB,BONE,[X(.88),4.72,-.2],[X(.66),4.38,-.4],.12);
+PG(BONE,[X(.66),4.36,-.42],[.13,.15,.14]);PG(BONE,[X(.45),5.9,-.8],[.08,.09,.07])});
+PG(CART,[0,4.6,.6],[.03,.18,.09]);
+// trunk skin (waist to hips) and briefs share one profile: [y, rx, front, back]
+const TRP=[[4.3,.08,.12,.12],[4.42,.4,.52,.58],[4.7,1.15,.8,.98],[5.0,1.75,.92,1.2],[5.3,2.3,1.0,1.32],[6.0,2.15,1.02,1.22],[6.6,1.75,1.0,1.0],[7.4,1.55,.95,.85]];
+function loft(T,y0,y1,ex){const g=T.g.attributes.position,K=T.K;for(let i=0;i<T.N;i++){const y=y0+(y1-y0)*i/(T.N-1),p=lerpTab(TRP,y);for(let j=0;j<=K;j++){const an=j/K*6.2832,sn=Math.sin(an);g.setXYZ(i*(K+1)+j,Math.cos(an)*(p[1]+ex),y,-.05+sn*((sn>0?p[2]:p[3])+ex))}}g.needsUpdate=true;T.g.computeVertexNormals()}
+const TSK=Tube(PSK,SKM,24,48);TSK.m.renderOrder=10;loft(TSK,5.95,7.4,0);
+const BRM=mat(0x22324a,{roughness:.92,side:2}),WBM=mat(0x0f172a,{roughness:.7,side:2});
+loft(Tube(BRF,BRM,40,64),4.3,6.08,.06);loft(Tube(BRF,WBM,4,64),6.02,6.2,.08);
+// gluteal labels (central)
+const LBP=mkL([['Iliac crest',()=>V(-1.2,6.45,-.1)],['ASIS',()=>V(-1.45,5.8,.72)],['Ilium',()=>V(-1.2,6.0,-.38)],['Sacrum',()=>V(0,5.8,-1.08)],['Coccyx',()=>V(0,4.92,-.85)],['Pubic symphysis',()=>V(0,4.62,.74)],['Ischial tuberosity',()=>V(-.7,4.25,-.58)],['Acetabulum',()=>V(-1.15,4.95,.2)]]);LBP.cen=1;
+const mid=l=>()=>l.a().add(l.b()).multiplyScalar(.5);
+const LBL=mkL(LGM.filter(l=>l.n).map(l=>[l.n,mid(l)]).concat([['Patellar ligament',()=>PT.bot.clone().add(tp(.02,-.8,.28)).multiplyScalar(.5)],['Achilles tendon',()=>tf(.02,.35,-.7)],['Plantar fascia',()=>tf(0,-1.0,.7)],['Menisci',()=>tp(-.42,-.41,.15)]]),'#7dd3fc');
+$('lbl').onchange=e=>{LBB.D.style.display=LBP.D.style.display=e.target.checked?'block':'none'};
+$('lbl2').onchange=e=>{LBL.D.style.display=e.target.checked?'block':'none'};
+
+// ===== Kinesio taping: techniques (0 Quadriceps Facilitation, 1 Patellar Correction) =====
+let tstep=0,tcol=0xf48fb1,tens=65,TP=0,tsel=0,tech=0,MIDon=false,PXc=0,PXt=0,MIDon2=false;
+const MIDP=V(0,0,0),MIDP2=V(0,0,0);
+G.tape=new THREE.Group();ROOT.add(G.tape);
+const TN=48,TMAT=new THREE.MeshStandardMaterial({vertexColors:true,side:2,roughness:.75,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
+const TD=document.createElement('div');TD.style.cssText='position:absolute;inset:0;pointer-events:none';box.appendChild(TD);
+function mkLab(t){const e=document.createElement('div');e.className='lb';e.style.borderColor='#22c55e';e.style.color='#86efac';e.textContent=t;e.style.display='none';TD.appendChild(e);return e}
+const STR=[{n:'RF',tech:0,y0:4.6,a0:-Math.PI/2,a1:-Math.PI/2,top:1,off0:V(.55,0,.2),off1:V(.55,0,.2)},{n:'VL',tech:0,y0:4.3,a0:-.55,a1:-1.2,top:0,off0:V(.9,0,0),off1:V(.9,0,0)},{n:'VM',tech:0,y0:2.7,a0:-2.7,a1:-1.94,top:0,off0:V(-.9,0,0),off1:V(-.9,0,0)},{n:'Patella',tech:1,trans:1,y0:0,a0:.3,a1:-Math.PI-.3,top:0,off0:V(.55,0,.12),off1:V(-.55,0,.12)}];
+STR.forEach(s=>{const g=new THREE.BufferGeometry(),ix=[];g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(TN*9),3));g.setAttribute('color',new THREE.BufferAttribute(new Float32Array(TN*9),3));
+for(let i=0;i<TN-1;i++)for(let k=0;k<2;k++){const a=i*3+k,b=a+3;ix.push(a,b,a+1,b,b+1,a+1)}g.setIndex(ix);
+const m=new THREE.Mesh(g,TMAT);m.frustumCulled=false;m.renderOrder=11;m.visible=false;G.tape.add(m);
+s.g=g;s.m=m;s.v=false;s.p0=V(0,0,0);s.p1=V(0,0,0);s.e0=mkLab(s.n+' ฐาน 0%');s.e1=mkLab(s.n+' ปลาย 0%')});
+const MID=mkLab(''),MID2=mkLab(''),GLB=mkLab('Medial glide →'),GLP=V(0,0,0);
+const TA=new THREE.Group(),am=new THREE.MeshBasicMaterial({color:0x22c55e,depthTest:false,transparent:true,opacity:.95}),sh1=new THREE.Mesh(new THREE.CylinderGeometry(.06,.06,.8,12),am),sh2=new THREE.Mesh(new THREE.ConeGeometry(.17,.32,16),am);
+sh1.position.y=-.4;sh2.rotation.z=Math.PI;sh2.position.y=-.96;sh1.renderOrder=sh2.renderOrder=20;TA.add(sh1,sh2);TA.visible=false;TA.scale.setScalar(.6);G.tape.add(TA);
+const TAB=new THREE.Group();TAB.add(sh1.clone(),sh2.clone());TAB.visible=false;TAB.scale.setScalar(.6);G.tape.add(TAB);
+function tlab(){const w=box.clientWidth,h=box.clientHeight,gv=G.tape.visible;
+const put=(e,v,on)=>{const o=!!on&&gv;e.style.display=o?'block':'none';if(o){const p=toW(v.clone()).project(C);e.style.left=(p.x*.5+.5)*w+'px';e.style.top=(-p.y*.5+.5)*h+'px'}};
+STR.forEach(s=>{put(s.e0,s.p0,s.v&&tstep>=1&&TP>.05);put(s.e1,s.p1,s.v&&tstep>=3&&TP>.95)});
+MID.textContent='ดึง '+tens+'%';put(MID,MIDP,MIDon&&tstep>=2&&TP>.5);MID2.textContent='ดึง '+tens+'%';put(MID2,MIDP2,MIDon2&&tstep>=2&&TP>.5);put(GLB,GLP,TAB.visible&&TP>.3)}
+function tapeUp(){const on=TP>.01&&SKC,vis=Math.round(TP*(TN-1))+1;
+STR.forEach((s,si)=>{const v=!!on&&(s.tech?tech>0:tech!==1)&&(s.tech||tsel===0||tsel===si+1);s.m.visible=v;s.v=v;if(!v)return;
+const pos=s.g.attributes.position,col=s.g.attributes.color,cb=new THREE.Color(s.tech&&tech===2?(tcol===0x4aa3df?0xf48fb1:0x4aa3df):tcol),py=pat.position.y,tP=tY(py),t0=tY(s.y0),t1=s.top?tY(py+.3):tP,dl=.3/SKL;
+for(let i=0;i<TN;i++){const u=i/(TN-1),an0=s.a0+(s.a1-s.a0)*u,sm=Math.max(0,Math.min(1,Math.min(u-.1,.9-u)/.08)),ten=sm*tens/100,f=1-.5*ten/.75;
+for(let k=0;k<3;k++){const tt=s.trans?Math.max(0,Math.min(1,tP+(k-1)*dl)):t0+(t1-t0)*u,an=s.trans?an0:an0+(k-1)*.32,q=rpt(ring(tt),an,s.tech?.045:.025),j=i*3+k;
+pos.setXYZ(j,q.x,q.y,q.z);col.setXYZ(j,cb.r*f,cb.g*f,cb.b*f)}}
+pos.needsUpdate=true;col.needsUpdate=true;s.g.setDrawRange(0,Math.max(0,vis-1)*12);s.g.computeVertexNormals();
+const gp=i=>V(pos.getX(i*3+1),pos.getY(i*3+1),pos.getZ(i*3+1));
+s.p0=gp(Math.round(.05*(TN-1))).add(s.off0);s.p1=gp(Math.round(.95*(TN-1))).add(s.off1);s.pm=gp(Math.round(.5*(TN-1)))});
+const fq=STR.find(q=>q.v&&!q.tech),fp=STR.find(q=>q.v&&q.tech);MIDon=!!(fq||fp);
+TA.visible=!!fq&&tstep===2;TAB.visible=!!fp&&tstep===2;
+if(fq){MIDP.copy(fq.pm).add(V(.7,0,.2));TA.rotation.z=0;TA.position.set(fq.pm.x-.55,fq.pm.y+.25,fq.pm.z+.3)}else if(fp)MIDP.copy(fp.pm).add(V(.7,0,.2));
+MIDon2=!!fp&&!!fq;if(fp){MIDP2.copy(fp.pm).add(V(-.8,-.3,.2));TAB.rotation.z=-Math.PI/2;TAB.position.set(pat.position.x+1.0,pat.position.y,pat.position.z+.5);GLP.copy(TAB.position).add(V(-.3,.3,0))}}
+
+const TS=[[()=>'ก่อนติดเทป: ดูแนวกล้ามเนื้อ Quadriceps (RF, VL, VM) จากต้นขาไปยังลูกสะบ้า (ขั้นถัดไปจะจัดเข่างอประมาณ 45° ให้อัตโนมัติ)',()=>'จัดเข่างอประมาณ 45° แล้ววางฐานเทปโดยไม่ดึงเทป (0%)',()=>'ติดแขนเทปตามแนวกล้ามเนื้อไปทางลูกสะบ้า ที่แรงดึง '+tens+'%',()=>'วางส่วนปลายเทปบริเวณลูกสะบ้า โดยไม่ดึงเทป (0%)'],
+[()=>'ก่อนติดเทป: สังเกตแนวลูกสะบ้าของผู้ป่วย ปรับแถบ "แนวลูกสะบ้าของผู้ป่วย" ให้ตรงกับผู้ป่วย (ตัวอย่างเริ่มต้นเอียงออกด้านนอก)',()=>'ให้ผู้ป่วยนั่งเหยียดเข่า แล้ววางฐานเทปที่ด้านนอกของเข่า (บริเวณ LCL) โดยไม่ดึงเทป (0%)',()=>'ใช้นิ้วหัวแม่มือดันลูกสะบ้าเข้าด้านใน (medial glide) พร้อมดึงเทปข้ามลูกสะบ้าที่แรงดึง '+tens+'%',()=>'ติดปลายเทปด้านใน (medial) โดยไม่ดึงเทป (0%) แล้วถูเทปให้อุ่นเพื่อกระตุ้นกาว'],
+[()=>'ก่อนติดเทป: ดูตำแหน่งเทปของทั้งสองเทคนิคบนต้นขาและลูกสะบ้า (ลูกสะบ้าเอียงตามแถบ "แนวลูกสะบ้าของผู้ป่วย")',()=>'วางฐานเทปทุกแถบโดยไม่ดึงเทป (0%) • ปรับองศาเข่าตามโปรโตคอลของแต่ละเทคนิคด้วยตนเอง',()=>'ติดแขนเทป: Quadriceps ตามแนวกล้ามเนื้อ และ Patellar ข้ามลูกสะบ้าพร้อม medial glide ที่แรงดึง '+tens+'%',()=>'วางปลายเทปทุกแถบโดยไม่ดึงเทป (0%)']];
+const SD=['ติดทีละแถบตามลำดับ RF → VL → VM','RF: ฐานต่ำกว่า ASIS 10 ซม. → ปลายที่ขอบบนของลูกสะบ้า','VL: ฐานใต้ greater trochanter → ปลายที่ขอบด้านนอกของลูกสะบ้า','VM: ฐานที่ 1/3 กลางด้านในต้นขา → ปลายที่ขอบด้านในของลูกสะบ้า'];
+const INFO=['<span class="tbadge">เทคนิคที่ 1 • Quadriceps Facilitation</span><div class="gd" style="margin-top:0">รูปแบบเทป</div><div>I-strip 3 แถบ ตามแนว Rectus femoris, Vastus lateralis และ Vastus medialis</div><div class="gd">ทิศทาง</div><div>จากจุดเกาะต้นของกล้ามเนื้อบริเวณต้นขา ไปทางจุดเกาะปลายบริเวณลูกสะบ้า</div><div class="gd">แรงดึง</div><div>50–75% ในช่วงแนวกล้ามเนื้อ (ฐานและปลายเทป 0%)</div><div class="gd">ท่าที่ใช้ติด</div><div>เข่างอประมาณ 45° ขณะติดตามโปรโตคอล</div>',
+'<span class="tbadge">เทคนิคที่ 2 • Patellar Correction</span><div class="gd" style="margin-top:0">เป้าหมาย</div><div>ช่วยปรับแนวหรือการเคลื่อนของลูกสะบ้า</div><div class="gd">รูปแบบเทป</div><div>I-strip ขวางลูกสะบ้า ติดจากด้านนอกของเข่าไปด้านใน</div><div class="gd">ทิศทาง</div><div>ดึงลูกสะบ้าไปทางด้านใน (medial glide) โดยยึดแนวลูกสะบ้าจริงของผู้ป่วยเป็นหลัก</div><div class="gd">แรงดึง</div><div>ประมาณ 50–75% ขณะข้ามลูกสะบ้า (ฐานและปลายเทป 0%)</div><div class="gd">ท่าที่ใช้ติด</div><div>ผู้ป่วยนั่งเหยียดเข่า</div>',
+'<span class="tbadge">เทคนิค 1+2 • ใช้ร่วมกัน</span><div class="gd" style="margin-top:0">แสดงพร้อมกัน</div><div>เทคนิคที่ 1 Quadriceps Facilitation: I-strip 3 แถบ (RF, VL, VM) จากต้นขาไปลูกสะบ้า แรงดึง 50–75%</div><div>เทคนิคที่ 2 Patellar Correction: I-strip ขวางลูกสะบ้า จากด้านนอกไปด้านใน พร้อม medial glide แรงดึง 50–75%</div><div class="gd">ท่าเข่า</div><div>เทคนิคแรกใช้เข่างอประมาณ 45° เทคนิคหลังใช้ท่าเหยียดเข่า</div><div class="gd">สีเทป</div><div>เทปของ Patellar Correction ใช้สีตรงข้ามอัตโนมัติ เพื่อแยกจากเทป Quadriceps</div>'];
+const REF=['โปรโตคอลอ้างอิง: Arch Bone Jt Surg 2023;11(10):625–634 (PMC10590486) • ตำแหน่งฐานและปลายของ VL และ VM อ้างจากทะเบียนวิจัย IRCT ที่ดูเป็นโครงการเดียวกัน ควรตรวจกับฉบับเต็ม • เพื่อการเรียนการสอนเท่านั้น การติดเทปจริงต้องอิงการประเมินผู้ป่วยโดยผู้เชี่ยวชาญ • แนะนำให้เปิดผิวหนังและตั้งความทึบของผิวให้เห็นเทปชัด',
+'โปรโตคอลอ้างอิง: Knee Malalignment Taping Technique (Human Kinetics) — I-strip ติดจากด้านนอกของเข่าไปด้านใน ใช้นิ้วหัวแม่มือดันลูกสะบ้าเข้าด้านใน แรงดึงประมาณ 50–75% ผู้ป่วยนั่งเหยียดเข่า • ฐานและปลายเทป 0% เป็นหลักทั่วไปของ Kase ที่ยังไม่ได้ยืนยันจากแหล่งนี้ • ความยาวและความกว้างของเทปเป็นค่าประมาณ • เพื่อการเรียนการสอนเท่านั้น การติดเทปจริงต้องอิงการประเมินผู้ป่วยโดยผู้เชี่ยวชาญ',
+'แหล่งอ้างอิงของแต่ละเทคนิคอยู่ในแผงของเทคนิคนั้น (กดปุ่มเทคนิคเดี่ยวเพื่อดู) • โหมดนี้ใช้ดูตำแหน่งเทปร่วมกันเท่านั้น ไม่ได้อ้างอิงโปรโตคอลที่รวมสองเทคนิคเข้าด้วยกัน การใช้จริงต้องอิงการประเมินผู้ป่วยโดยผู้เชี่ยวชาญ'];
+function setPX(){const off=+$('pa').value/200,gl=Math.max(0,Math.min(off,.11*tens/75));PXt=tech>0?(tstep>=2?off-gl:off):0}
+function setStep(s){tstep=s;if(s>=1){play=false;$('play').textContent='▶ การงอ-เหยียดเข่า';if(tech!==2)deg=tech?0:45;update()}$('st').textContent=TS[tech][s]();document.querySelectorAll('[data-s]').forEach(b=>b.classList.toggle('on',+b.dataset.s===s));setPX()}
+function setSel(k,init){tsel=k;$('sd').textContent=SD[k];document.querySelectorAll('[data-k]').forEach(b=>b.classList.toggle('on',+b.dataset.k===k));if(!init)update()}
+function setTech(t,init){tech=t;$('tps').style.setProperty('--tc',['#fb923c','#2dd4bf','#c084fc'][t]);tsel=0;document.querySelectorAll('[data-t]').forEach(b=>b.classList.toggle('on',+b.dataset.t===t));$('ti').innerHTML=INFO[t];$('kr').style.display=t===1?'none':'block';$('par').style.display=t?'block':'none';setSel(0,1);setStep(0);if(!init)update()}
+document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>setTech(+b.dataset.t));
+document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>setStep(+b.dataset.s));
+document.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>setSel(+b.dataset.k));
+$('tn').oninput=e=>{tens=+e.target.value;$('tnv').textContent=tens+'%';setStep(tstep)};
+$('pa').oninput=e=>{const v=+e.target.value;$('pav').textContent=v>0?'เอียงออกด้านนอก (lateral) '+v:v<0?'เอียงเข้าด้านใน (medial) '+(-v):'แนวกึ่งกลาง';setPX()};
+document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{tcol=parseInt(b.dataset.c,16);update()});
+$('pa').oninput({target:$('pa')});setTech(0,1);
+// state & update
+function update(){const th=deg*Math.PI/180;TH=th;M.makeRotationX(th);tB.rotation.x=th;tC.rotation.x=th;
+T1.makeTranslation(A.x,A.y,A.z);T2.makeTranslation(-A.x,-A.y,-A.z);RA.makeRotationX(-ank*Math.PI/180);MA.copy(M).multiply(T1).multiply(RA).multiply(T2);
+[kB,kC,kL,kS].forEach(g=>{g.matrix.copy(MA);g.matrixWorldNeedsUpdate=true});
+const a=th*.55,b=.09-a,pp=V(PXc,-.02+.55*Math.sin(b),-.04+.55*Math.cos(b));pat.position.copy(pp);pat.rotation.x=a;
+const up=V(0,.28*Math.cos(a),.28*Math.sin(a));PT.top.copy(pp).add(up);PT.bot.copy(pp).sub(up);
+LGM.forEach(l=>place(l.m,l.a(),l.b(),l.r));place(ptd,PT.bot,tp(.02,-.8,.28),.065);
+MS.forEach(o=>{const s=o.s,og=s.o(),ins=s.i(),ws=(s.w||[]).map(f=>f()),f0=ws.length?ws[0]:ins,e=og.clone().lerp(f0,s.k),bg=s.bg.clone().applyMatrix4(new THREE.Matrix4().makeRotationX(th*(s.rb||0))),c=og.clone().lerp(e,.5).add(bg);
+shape(o.b,bzF(og,e,c),bel(s.r,s.pk),s.fl||.72);const tw=s.tw||1;let P;if(ws.length){const cr=new THREE.CatmullRomCurve3([e,...ws,ins],false,'centripetal');P=t=>cr.getPoint(t)}else P=bzF(e,ins,e.clone().lerp(ins,.5));shape(o.t,P,t=>tw*tr(t),.4,.02)});
+skinUp();tapeUp();
+$('deg').textContent=deg+'°';$('sl').value=deg;document.querySelectorAll('[data-d]').forEach(b=>b.classList.toggle('on',+b.dataset.d===deg));
+}
+// camera
+const cam={yaw:0,pitch:.12,dist:25,ty:.4},goal={yaw:0,pitch:.12,dist:25,ty:.4},views={front:[0,.12,'ด้านหน้า'],back:[Math.PI,.12,'ด้านหลัง'],side:[Math.PI/2,.12,'ด้านข้าง']},FOC={leg:[25,.4],hip:[10,5.5],knee:[7,0],thigh:[12,2.4],ankle:[7.5,-5.7]};
+function setView(k){const v=views[k];let y=v[0];while(y-goal.yaw>Math.PI)y-=2*Math.PI;while(y-goal.yaw<-Math.PI)y+=2*Math.PI;goal.yaw=y;goal.pitch=v[1];$('vl').textContent='มุมมอง'+v[2];document.querySelectorAll('[data-v]').forEach(b=>b.classList.toggle('on',b.dataset.v===k))}
+function setFoc(k){goal.dist=FOC[k][0];goal.ty=FOC[k][1];document.querySelectorAll('[data-f]').forEach(b=>b.classList.toggle('on',b.dataset.f===k))}
+document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>setView(b.dataset.v));
+document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>setFoc(b.dataset.f));
+$('rv').onclick=()=>{setView('front');setFoc('leg')};
+const cz=k=>goal.dist=Math.min(34,Math.max(3,goal.dist*k));
+const cv=R.domElement;
+const PTR=new Map();let pd=0;
+cv.onpointerdown=e=>{PTR.set(e.pointerId,[e.clientX,e.clientY]);cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing';if(PTR.size===2){const a=[...PTR.values()];pd=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1])}};
+cv.onpointerup=cv.onpointercancel=e=>{PTR.delete(e.pointerId);if(!PTR.size)cv.style.cursor='grab'};
+cv.onpointermove=e=>{if(!PTR.has(e.pointerId))return;const o=PTR.get(e.pointerId);PTR.set(e.pointerId,[e.clientX,e.clientY]);
+if(PTR.size===2){const a=[...PTR.values()],d=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]);if(pd>0&&d>0)cz(pd/d);pd=d;return}
+if(e.shiftKey){goal.ty=Math.max(-7,Math.min(7.5,goal.ty+(e.clientY-o[1])*.02*goal.dist/15));return}
+goal.yaw-=(e.clientX-o[0])*.008;goal.pitch=Math.max(-1.3,Math.min(1.3,goal.pitch+(e.clientY-o[1])*.008))};
+cv.addEventListener('wheel',e=>{e.preventDefault();cz(e.deltaY>0?1.08:.92)},{passive:false});
+
+// controls
+document.querySelectorAll('[data-l]').forEach(c=>c.onchange=()=>{G[c.dataset.l].visible=c.checked;PSK.visible=G.skin.visible;PB.visible=G.bone.visible});
+$('brf').onchange=e=>{BRF.visible=e.target.checked};
+$('sl').oninput=e=>{deg=+e.target.value;update()};
+document.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{deg=+b.dataset.d;update()});
+
+document.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{ank=+b.dataset.a;update()});
+$('play').onclick=()=>{play=!play;$('play').textContent=play?'⏸ หยุด':'▶ การงอ-เหยียดเข่า'};
+$('aplay').onclick=()=>{aplay=!aplay;$('aplay').textContent=aplay?'⏸ หยุดข้อเท้า':'▶ กระดก–ถีบข้อเท้า'};
+$('rs').onclick=()=>{play=aplay=false;$('play').textContent='▶ การงอ-เหยียดเข่า';$('aplay').textContent='▶ กระดก–ถีบข้อเท้า';deg=0;ank=0;update()};
+function fit(){const w=box.clientWidth,h=box.clientHeight;R.setSize(w,h);C.aspect=w/h;C.updateProjectionMatrix()}
+new ResizeObserver(fit).observe(box);fit();
+
+// ===== Muscle info card, landmarks, practice mode =====
+const MI={
+'Rectus femoris':{o:'AIIS (straight head) และขอบบนของเบ้าสะโพก (reflected head)',i:'ฐานของลูกสะบ้าผ่าน quadriceps tendon แล้วต่อเป็น patellar ligament ไป tibial tuberosity',a:'เหยียดเข่า และงอสะโพก',n:'Femoral nerve (L2–L4)'},
+'Vastus lateralis':{o:'greater trochanter, intertrochanteric line และ lateral lip ของ linea aspera',i:'ขอบด้านนอกของลูกสะบ้า ผ่าน quadriceps tendon และ patellar ligament',a:'เหยียดเข่า',n:'Femoral nerve (L2–L4)'},
+'Vastus medialis':{o:'intertrochanteric line และ medial lip ของ linea aspera',i:'ขอบด้านในของลูกสะบ้า ผ่าน quadriceps tendon และ patellar ligament',a:'เหยียดเข่า (โดยเฉพาะช่วงท้ายของการเหยียด) และช่วยพยุงแนวลูกสะบ้าด้านใน (ส่วน VMO)',n:'Femoral nerve (L2–L4)'},
+'Vastus intermedius':{o:'ผิวด้านหน้าและด้านนอกของลำกระดูกต้นขา',i:'ฐานของลูกสะบ้า ผ่าน quadriceps tendon',a:'เหยียดเข่า',n:'Femoral nerve (L2–L4)'},
+'Biceps femoris':{o:'long head: ischial tuberosity • short head: lateral lip ของ linea aspera',i:'fibular head',a:'งอเข่า หมุนหน้าแข้งออกเมื่อเข่างอ และเหยียดสะโพก (long head)',n:'long head: tibial division ของ sciatic nerve • short head: common fibular division (L5–S2)'},
+'Semitendinosus':{o:'ischial tuberosity',i:'ผิวด้านในของ tibia ส่วนบน (pes anserinus)',a:'งอเข่า หมุนหน้าแข้งเข้า และเหยียดสะโพก',n:'Tibial division ของ sciatic nerve (L5–S2)'},
+'Semimembranosus':{o:'ischial tuberosity',i:'ด้านหลังของ medial tibial condyle',a:'งอเข่า หมุนหน้าแข้งเข้า และเหยียดสะโพก',n:'Tibial division ของ sciatic nerve (L5–S2)'},
+'Gastrocnemius (medial head)':{o:'ด้านหลังของ medial femoral condyle',i:'calcaneus ผ่าน Achilles tendon',a:'กระดกข้อเท้าลง (plantarflexion) และช่วยงอเข่า',n:'Tibial nerve (S1–S2)'},
+'Gastrocnemius (lateral head)':{o:'ด้านหลังของ lateral femoral condyle',i:'calcaneus ผ่าน Achilles tendon',a:'กระดกข้อเท้าลง (plantarflexion) และช่วยงอเข่า',n:'Tibial nerve (S1–S2)'},
+'Soleus':{o:'ด้านหลังของ fibular head และส่วนบนของลำกระดูก fibula รวมถึง soleal line ของ tibia',i:'calcaneus ผ่าน Achilles tendon',a:'กระดกข้อเท้าลง โดยเฉพาะขณะยืน',n:'Tibial nerve (S1–S2)'}};
+MI['Gluteus maximus']={o:'ผิวด้านหลังของ ilium หลัง posterior gluteal line, sacrum, coccyx และ sacrotuberous ligament',i:'gluteal tuberosity ของ femur และ iliotibial tract (IT band)',a:'เหยียดสะโพก หมุนต้นขาออก • สำคัญขณะลุกจากเก้าอี้ ขึ้นบันได',n:'Inferior gluteal nerve (L5–S2)'};
+MI['Gluteus medius']={o:'ผิวด้านนอกของ ilium ระหว่าง anterior และ posterior gluteal line',i:'ด้านนอกของ greater trochanter',a:'กางสะโพก และยึดเชิงกรานให้ระดับขณะยืนขาเดียว (อ่อนแรงทำให้เกิด Trendelenburg sign)',n:'Superior gluteal nerve (L4–S1)'};
+MI['Tibialis anterior']={o:'lateral condyle และผิวด้านนอก 2/3 บนของ tibia รวมถึง interosseous membrane',i:'medial cuneiform และฐานของ metatarsal ที่ 1',a:'กระดกข้อเท้าขึ้น (dorsiflexion) และบิดฝ่าเท้าเข้า (inversion) • ช่วยยกปลายเท้าขณะเดินไม่ให้เท้าตก',n:'Deep fibular nerve (L4–L5)'};
+MI['Fibularis longus']={o:'fibular head และผิวด้านนอก 2/3 บนของ fibula',i:'ฐานของ metatarsal ที่ 1 และ medial cuneiform (ด้านฝ่าเท้า) โดยเอ็นอ้อมหลัง lateral malleolus และลอดใต้ cuboid',a:'บิดฝ่าเท้าออก (eversion) ช่วยถีบปลายเท้าลง และช่วยพยุงอุ้งเท้า',n:'Superficial fibular nerve (L5–S1)'};
+
+const MC=document.createElement('div');MC.className='mc';MC.style.display='none';box.appendChild(MC);
+function minfo(){const m=sel&&MI[sel.n];if(!m){MC.style.display='none';return}MC.innerHTML='<b>'+sel.n+'</b><span>จุดเกาะต้น</span>'+m.o+'<span>จุดเกาะปลาย</span>'+m.i+'<span>การทำงาน</span>'+m.a+'<span>เส้นประสาทที่เลี้ยง</span>'+m.n+'<span style="margin-top:8px">ข้อมูลทั่วไปเพื่อการเรียน รูปทรงในโมเดลเป็นการจำลอง ควรตรวจกับตำรากายวิภาค</span>';MC.style.display='block'}
+const LMD=[['ASIS (โดยประมาณ)',()=>V(.5,5.75,.8)],['Greater trochanter',()=>V(.86,4.72,0)],['กึ่งกลางด้านในต้นขา (1/3 กลาง)',()=>V(-.8,2.7,.1)],['ขอบบนลูกสะบ้า',()=>PT.top.clone()],['ขอบนอกลูกสะบ้า',()=>pat.position.clone().add(V(.25,0,0))],['ขอบในลูกสะบ้า',()=>pat.position.clone().add(V(-.25,0,0))],['ด้านนอกเข่า (LCL)',()=>V(.72,0,0)],['Tibial tuberosity',()=>tp(.02,-.82,.4)],['Medial malleolus',()=>tp(-.36,-5.33,.05)],['Lateral malleolus',()=>tp(.44,-5.45,-.08)]];
+
+let LMon=false;
+const LMG=new THREE.Group();LMG.visible=false;ROOT.add(LMG);
+const LMM=LMD.map(()=>{const m=new THREE.Mesh(new THREE.SphereGeometry(.06,12,10),new THREE.MeshBasicMaterial({color:0xfacc15,depthTest:false}));m.renderOrder=30;LMG.add(m);return m});
+const LD2=document.createElement('div');LD2.style.cssText='position:absolute;inset:0;pointer-events:none;display:none';box.appendChild(LD2);
+const LME=LMD.map(l=>{const e=document.createElement('div');e.className='lb';e.textContent=l[0];LD2.appendChild(e);return e});
+function setLM(on){LMon=on;LMG.visible=on;LD2.style.display=on?'block':'none';$('lm').checked=on}
+$('lm').onchange=e=>setLM(e.target.checked);
+function lmUp(){if(!LMon)return;const w=box.clientWidth,h=box.clientHeight;LMD.forEach((l,i)=>{const p=l[1]();LMM[i].position.copy(p);const q=toW(p.clone()).project(C);LME[i].style.left=(q.x*.5+.5)*w+'px';LME[i].style.top=(-q.y*.5+.5)*h-14+'px'})}
+// Practice mode
+const sh=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+function qRender(title,opts,onPick){const q=$('qa');q.innerHTML='';const h=document.createElement('div');h.innerHTML=title;h.style.marginBottom='8px';q.appendChild(h);const r=document.createElement('div');r.className='row';r.style.margin='0 0 8px';opts.forEach((t,i)=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>{[...r.children].forEach(x=>x.disabled=true);onPick(i,r)};r.appendChild(b)});q.appendChild(r);const f=document.createElement('div');f.id='qf';q.appendChild(f)}
+function qMark(r,ci,pi){r.children[ci].style.background='#166534';if(pi!==ci)r.children[pi].style.background='#7f1d1d'}
+function qNext(fn,txt){const b=document.createElement('button');b.textContent=txt||'ข้อถัดไป';b.style.marginTop='6px';b.onclick=fn;$('qf').appendChild(b)}
+let mq=0,ms=0,tq=0,ts=0;
+function qMuscle(){NAT.checked=true;setCol();document.querySelector('[data-l="skin"]').checked=false;G.skin.visible=false;
+const o=MS[Math.random()*MS.length|0],opts=sh([o,...sh(MS.filter(x=>x!==o)).slice(0,3)]);sel=o;fade();MC.style.display='none';
+qRender('กล้ามเนื้อที่ไฮไลต์ในโมเดลคือมัดใด? (หมุนโมเดลเพื่อดู) <span class="sub">คะแนน '+ms+'/'+mq+'</span>',opts.map(x=>x.n),(i,r)=>{const ok=opts[i]===o;mq++;if(ok)ms++;qMark(r,opts.indexOf(o),i);minfo();$('qf').innerHTML=(ok?'ถูกต้อง':'ยังไม่ถูก คำตอบคือ '+o.n)+' — ดูจุดเกาะและเส้นประสาทในกรอบบนโมเดล ';qNext(qMuscle)})}
+const QB=[
+{q:'ฐานเทปของแถบ RF (Quadriceps Facilitation) ควรอยู่ที่ใด',ok:'ต่ำกว่า ASIS ประมาณ 10 ซม.',bad:['ขอบบนของลูกสะบ้า','ใต้ greater trochanter','กึ่งกลางด้านในต้นขา'],e:'ตามโปรโตคอลอ้างอิงในโมเดล แถบ RF เริ่มที่ต่ำกว่า ASIS 10 ซม. ไปสิ้นสุดที่ขอบบนของลูกสะบ้า'},
+{q:'ฐานเทปของแถบ VL ควรอยู่ที่ใด',ok:'ใต้ greater trochanter',bad:['ต่ำกว่า ASIS 10 ซม.','ขอบในลูกสะบ้า','Tibial tuberosity'],e:'แถบ VL เริ่มใต้ greater trochanter ไปสิ้นสุดที่ขอบด้านนอกของลูกสะบ้า (ตามทะเบียนวิจัยที่ใช้อ้างอิง ควรตรวจกับฉบับเต็ม)'},
+{q:'ฐานเทปของแถบ VM ควรอยู่ที่ใด',ok:'1/3 กลางด้านในต้นขา',bad:['ใต้ greater trochanter','ด้านนอกเข่า (LCL)','ต่ำกว่า ASIS 10 ซม.'],e:'แถบ VM เริ่มที่ 1/3 กลางด้านในต้นขา ไปสิ้นสุดที่ขอบด้านในของลูกสะบ้า (ตามทะเบียนวิจัยที่ใช้อ้างอิง ควรตรวจกับฉบับเต็ม)'},
+{q:'แรงดึงที่ใช้ช่วงแขนเทปในโมเดลนี้คือเท่าใด',ok:'50–75%',bad:['0%','10–15%','100%'],e:'โมเดลใช้ 50–75% ในช่วงแนวกล้ามเนื้อหรือขณะข้ามลูกสะบ้า โปรโตคอลอื่นอาจใช้ช่วงต่างกัน'},
+{q:'แรงดึงของฐานและปลายเทปคือเท่าใด',ok:'0% (ไม่ดึง)',bad:['50%','75%','100%'],e:'ฐานและปลายเทปติดโดยไม่ดึง (0%)'},
+{q:'ท่าเข่าตอนติด Quadriceps Facilitation ในโมเดลนี้',ok:'งอประมาณ 45°',bad:['เหยียดเต็มที่','งอ 135°','งอ 90° นอนตะแคง'],e:'ตามโปรโตคอลอ้างอิง เข่างอประมาณ 45°'},
+{q:'Patellar Correction ดึงลูกสะบ้าไปทางใด',ok:'ด้านใน (medial glide)',bad:['ด้านนอก (lateral glide)','ด้านบน','ด้านล่าง'],e:'เทคนิคนี้ดึงลูกสะบ้าไปด้านใน โดยยึดแนวลูกสะบ้าจริงของผู้ป่วย'},
+{q:'ท่าผู้ป่วยตอนติด Patellar Correction ตามตำราที่ใช้อ้างอิง',ok:'นั่งเหยียดเข่า',bad:['งอเข่า 45°','งอเข่าเต็มที่','ยืนลงน้ำหนัก'],e:'ตำราที่ใช้อ้างอิงระบุให้ผู้ป่วยนั่งเหยียดเข่า เพื่อให้ลูกสะบ้าหลุดจากร่องและเลื่อนเข้าด้านในได้'}];
+function qTape(){setLM(true);const it=QB[Math.random()*QB.length|0],opts=sh([it.ok,...it.bad]);
+qRender(it.q+' <span class="sub">คะแนน '+ts+'/'+tq+'</span>',opts,(i,r)=>{const ok=opts[i]===it.ok;tq++;if(ok)ts++;qMark(r,opts.indexOf(it.ok),i);$('qf').innerHTML=(ok?'ถูกต้อง':'ยังไม่ถูก')+' — '+it.e+' ';qNext(qTape)})}
+const SC=[
+{t:'หญิง 62 ปี ข้อเข่าเสื่อม ปวดหน้าเข่าเวลาขึ้นบันได ตรวจพบลูกสะบ้าเอียงออกด้านนอก กำลังกล้ามเนื้อต้นขาปกติ',pa:25,best:1,e:'ปัญหาหลักคือแนวลูกสะบ้า จึงเข้ากับเทคนิค Patellar Correction ซึ่งมีเป้าหมายปรับแนวลูกสะบ้าไปด้านใน (medial glide)'},
+{t:'ชาย 68 ปี ข้อเข่าเสื่อม ลุกจากเก้าอี้ลำบาก ตรวจพบกำลังกล้ามเนื้อ quadriceps อ่อนแรง แนวลูกสะบ้าปกติ',pa:0,best:0,e:'ปัญหาหลักคือ quadriceps อ่อนแรง และแนวลูกสะบ้าปกติ จึงเข้ากับเทคนิค Quadriceps Facilitation'},
+{t:'หญิง 65 ปี ข้อเข่าเสื่อม ต้นขาอ่อนแรงร่วมกับลูกสะบ้าเอียงออกด้านนอก',pa:20,best:2,e:'มีทั้งสองปัญหา จึงอาจพิจารณาทั้งสองเทคนิค แต่โมเดลนี้ไม่ได้อ้างอิงโปรโตคอลที่ใช้สองเทคนิคร่วมกัน ผู้เชี่ยวชาญควรเป็นผู้ตัดสินใจ'},
+{t:'หญิง 80 ปี ข้อเข่าเสื่อม ผิวบางและเคยแพ้พลาสเตอร์ มีแผลเปื่อยบริเวณเข่า',pa:10,best:3,e:'ผิวบอบบาง แผล หรือประวัติแพ้กาว เป็นข้อควรระวังในการติดเทป ควรประเมินและปรึกษาผู้เชี่ยวชาญก่อน ไม่ใช่ทุกรายที่ควรติดเทป'}];
+function qScenario(){const q=$('qa');q.innerHTML='<div class="sub" style="margin-bottom:6px">เลือกกรณีผู้ป่วย แล้วเลือกแนวทางที่เหมาะสม</div>';const r=document.createElement('div');r.className='row';r.style.margin='0 0 8px';SC.forEach((s,i)=>{const b=document.createElement('button');b.textContent='กรณีที่ '+(i+1);b.onclick=()=>scPick(i);r.appendChild(b)});q.appendChild(r);const c=document.createElement('div');c.id='qs';q.appendChild(c)}
+function scPick(i){const s=SC[i],c=$('qs');$('pa').value=s.pa;$('pa').oninput({target:$('pa')});setTech(2);update();c.innerHTML='';
+const h=document.createElement('div');h.textContent=s.t;h.style.margin='4px 0 8px';c.appendChild(h);
+const r=document.createElement('div');r.className='row';r.style.margin='0 0 8px';const f=document.createElement('div');
+['เทคนิคที่ 1 Quadriceps Facilitation','เทคนิคที่ 2 Patellar Correction','เทคนิค 1+2 ใช้ร่วมกัน','ยังไม่ควรติดเทป ประเมินเพิ่มก่อน'].forEach((t,k)=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>{[...r.children].forEach(x=>x.disabled=true);qMark(r,s.best,k);f.textContent=(k===s.best?'เหมาะสม — ':'ยังไม่ใช่คำตอบที่เหมาะสมที่สุด — ')+s.e;if(k<3){const g=document.createElement('button');g.textContent='ดูเทคนิคที่เลือกบนโมเดล';g.style.display='block';g.style.marginTop='6px';g.onclick=()=>{setTech(k===2?2:k);setStep(2)};f.appendChild(g)}};r.appendChild(b)});
+c.appendChild(r);c.appendChild(f)}
+function qMode(m){document.querySelectorAll('[data-q]').forEach(b=>b.classList.toggle('on',+b.dataset.q===m));sel=null;fade();document.querySelectorAll('.mu').forEach(x=>x.classList.remove('sel'));MC.style.display='none';[qScenario,qMuscle,qTape][m]()}
+document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>qMode(+b.dataset.q));if($('qa'))qMode(0);
+const LEGS={both:[[-1,-.9],[1,.9]],right:[[-1,0]],left:[[1,0]]},LGT={both:'ขา 2 ข้าง • ป้ายชื่อแสดงที่ขาขวา (ซ้ายของภาพเมื่อมองด้านหน้า)',right:'ขาขวา • ด้านใน = ขวาของภาพเมื่อมองด้านหน้า',left:'ขาซ้าย • ด้านใน = ซ้ายของภาพเมื่อมองด้านหน้า'};let legMode='both';
+function setLeg(k){legMode=k;$('lgt').textContent='แสดงภาพจำลองเชิงสามมิติจากรูปทรงพื้นฐาน • '+LGT[k];document.querySelectorAll('[data-g]').forEach(b=>b.classList.toggle('on',b.dataset.g===k))}
+document.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>setLeg(b.dataset.g));setLeg('both');
+let last=performance.now();
+(function loop(t){requestAnimationFrame(loop);const dt=Math.min((t-last)/1000,.1);last=t;let ch=false;
+if(play){deg+=dir*Math.max(1,Math.round(dt*50));if(deg>=135){deg=135;dir=-1}if(deg<=0){deg=0;dir=1}ch=true}
+if(aplay){ank+=adir*Math.max(1,Math.round(dt*35));if(ank>=20){ank=20;adir=-1}if(ank<=-50){ank=-50;adir=1}ch=true}
+const tt2=[0,.12,.9,1][tstep];if(Math.abs(tt2-TP)>.002||Math.abs(PXt-PXc)>.001){TP+=(tt2-TP)*.12;PXc+=(PXt-PXc)*.12;ch=true}
+if(ch)update();
+for(const k in cam)cam[k]+=(goal[k]-cam[k])*.12;
+const cp=Math.cos(cam.pitch);C.position.set(Math.sin(cam.yaw)*cp*cam.dist,cam.ty+Math.sin(cam.pitch)*cam.dist,Math.cos(cam.yaw)*cp*cam.dist);C.lookAt(0,cam.ty,0);
+C.updateMatrixWorld();const LG=LEGS[legMode];LBM.makeScale(LG[0][0],1,1).setPosition(LG[0][1],0,0);drawL(LBB);drawL(LBL);tlab();lmUp();
+R.autoClear=false;R.clear();PEL.position.x=legMode==='right'?.9:legMode==='left'?-.9:0;drawL(LBP);LG.forEach((g,n)=>{PEL.visible=n===0;ROOT.scale.x=g[0];ROOT.position.x=g[1];ROOT.updateMatrixWorld(true);R.render(S,C)})})(last);
+update();
+
+</script></body></html>
+</body></html>
